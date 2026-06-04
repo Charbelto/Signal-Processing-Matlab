@@ -119,3 +119,18 @@ This module implements baseband simulation of **Binary Phase Shift Keying (BPSK)
     This script will output the simulated BER curve compared to the theoretical curve:
     
     $$P_b = Q\left(\sqrt{\frac{2E_b}{N_0}}\right)$$
+
+
+---
+
+## 🛠️ System Architecture
+
+```mermaid
+graph TD
+    A[Raw Signal Input] --> B[Time-Domain Analysis]
+    B --> C[Fast Fourier Transform (FFT)]
+    C --> D[Frequency-Domain Representation]
+    D --> E[Bandpass / Lowpass Digital Filtering]
+    E --> F[Signal Demodulation & Reconstruction]
+    F --> G[MATLAB Visualization Plots]
+```
